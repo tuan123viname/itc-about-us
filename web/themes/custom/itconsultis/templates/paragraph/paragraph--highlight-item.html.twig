@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override for Highlight Item paragraph.
+ */
+#}
+{%
+  set image_position = content.field_image_position['#items']|first.value ?: 'none'
+%}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'highlight-item',
+    'highlight--' ~ image_position,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }} role="listitem">
+  <div class="highlight-content">
+    {% if content.field_images %}
+      <div class="highlight-images">
+        {{ content.field_images }}
+      </div>
+    {% endif %}
+
+    <div class="highlight-text">
+    {% if content.field_title %}
+      <h3 class="highlight-title">{{ content.field_title }}</h3>
+    {% endif %}
+    </div>
+  </div>
+</article>

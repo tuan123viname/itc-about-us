@@ -1,0 +1,19 @@
+uuid: 27d99b37-631a-4353-9e2e-9a16aeeb6953
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.highlight_section
+id: paragraph.highlight_section.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: highlight_section
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

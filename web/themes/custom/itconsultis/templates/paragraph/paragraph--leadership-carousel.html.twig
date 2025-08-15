@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for Leadership Carousel paragraph using Slick.js
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'leadership-section',
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }} aria-labelledby="leadership-title">
+  <div class="container">
+    {% if content.field_title %}
+      <div class="section-header">
+        <h2 id="leadership-title" class="section-title">{{ content.field_title }}</h2>
+      </div>
+    {% endif %}
+    
+    <div class="leadership-carousel">
+      <div class="carousel-container slick-carousel" role="region" aria-label="Leadership team carousel">
+        {{ content.field_team_members }}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,25 @@
+uuid: 983fb758-c48f-4171-8bea-1595778b8983
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.about_us_page.field_meta_tags
+    - field.field.node.about_us_page.field_page_sections
+    - node.type.about_us_page
+  module:
+    - user
+id: node.about_us_page.teaser
+targetEntityType: node
+bundle: about_us_page
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_meta_tags: true
+  field_page_sections: true
+  langcode: true

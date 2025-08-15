@@ -1,0 +1,10 @@
+{#
+/**
+ * @file
+ * Theme override for the photo field in team member paragraph.
+ * This completely removes all Drupal field wrapper divs.
+ */
+#}
+{%- for item in items -%}
+  {{- item.content -}}
+{%- endfor -%}

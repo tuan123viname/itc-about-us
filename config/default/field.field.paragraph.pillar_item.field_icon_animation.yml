@@ -1,0 +1,21 @@
+uuid: d5e15d29-d030-4c3c-a400-8f5ec92944d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_animation
+    - paragraphs.paragraphs_type.pillar_item
+  module:
+    - options
+id: paragraph.pillar_item.field_icon_animation
+field_name: field_icon_animation
+entity_type: paragraph
+bundle: pillar_item
+label: 'Icon Animation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

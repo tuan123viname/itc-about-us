@@ -1,0 +1,41 @@
+uuid: d433867d-e00f-40e1-a9e7-5b2abafbeae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.core_values_section.field_description
+    - field.field.paragraph.core_values_section.field_title
+    - field.field.paragraph.core_values_section.field_values
+    - paragraphs.paragraphs_type.core_values_section
+  module:
+    - entity_reference_revisions
+id: paragraph.core_values_section.default
+targetEntityType: paragraph
+bundle: core_values_section
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_values:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

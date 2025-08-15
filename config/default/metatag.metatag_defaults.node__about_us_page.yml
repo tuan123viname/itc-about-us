@@ -1,0 +1,9 @@
+uuid: 84fbacb9-59db-4e23-bb47-512a3b5d6256
+langcode: en
+status: true
+dependencies: {  }
+id: node__about_us_page
+label: 'Content: About Us Page'
+tags:
+  description: '[node:summary]'
+  title: '[node:title]'

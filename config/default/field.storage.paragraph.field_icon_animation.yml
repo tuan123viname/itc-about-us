@@ -1,0 +1,30 @@
+uuid: 1211a1e0-60d2-4ddb-b0a8-8a604a9cad3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icon_animation
+field_name: field_icon_animation
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: bounce
+      label: bounce
+    -
+      value: pulse
+      label: pulse
+    -
+      value: shake
+      label: shake
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

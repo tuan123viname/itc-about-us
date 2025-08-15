@@ -1,0 +1,42 @@
+uuid: 07fe395e-99d4-4998-92d0-88cdde2084d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pillar_item.field_icon
+    - field.field.paragraph.pillar_item.field_icon_animation
+    - field.field.paragraph.pillar_item.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.pillar_item
+  module:
+    - image
+id: paragraph.pillar_item.default
+targetEntityType: paragraph
+bundle: pillar_item
+mode: default
+content:
+  field_icon:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_icon_animation:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

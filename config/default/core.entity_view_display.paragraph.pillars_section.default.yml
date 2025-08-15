@@ -1,0 +1,41 @@
+uuid: 7b512ab1-7207-48ec-91bb-06282274e338
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pillars_section.field_description
+    - field.field.paragraph.pillars_section.field_pillars
+    - field.field.paragraph.pillars_section.field_title
+    - paragraphs.paragraphs_type.pillars_section
+  module:
+    - entity_reference_revisions
+id: paragraph.pillars_section.default
+targetEntityType: paragraph
+bundle: pillars_section
+mode: default
+content:
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_pillars:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

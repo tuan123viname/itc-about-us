@@ -1,0 +1,22 @@
+uuid: f9da0928-1120-47c0-81ea-0714c7556b6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.core_values_section
+id: paragraph.core_values_section.status
+field_name: status
+entity_type: paragraph
+bundle: core_values_section
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

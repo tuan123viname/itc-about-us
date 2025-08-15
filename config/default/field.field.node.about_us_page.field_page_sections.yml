@@ -1,0 +1,66 @@
+uuid: 7b34a0ab-a88d-4d5e-9ae7-f945615e7a2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_sections
+    - node.type.about_us_page
+    - paragraphs.paragraphs_type.core_value_item
+    - paragraphs.paragraphs_type.core_values_section
+    - paragraphs.paragraphs_type.hero_section
+    - paragraphs.paragraphs_type.highlight_section
+    - paragraphs.paragraphs_type.leadership_carousel
+    - paragraphs.paragraphs_type.pillar_item
+    - paragraphs.paragraphs_type.pillars_section
+    - paragraphs.paragraphs_type.team_member
+  module:
+    - entity_reference_revisions
+id: node.about_us_page.field_page_sections
+field_name: field_page_sections
+entity_type: node
+bundle: about_us_page
+label: 'Page Sections'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      core_value_item: core_value_item
+      core_values_section: core_values_section
+      hero_section: hero_section
+      highlight_section: highlight_section
+      leadership_carousel: leadership_carousel
+      pillar_item: pillar_item
+      pillars_section: pillars_section
+      team_member: team_member
+    negate: 0
+    target_bundles_drag_drop:
+      core_value_item:
+        weight: 9
+        enabled: true
+      core_values_section:
+        weight: 10
+        enabled: true
+      hero_section:
+        weight: 11
+        enabled: true
+      highlight_section:
+        weight: 12
+        enabled: true
+      leadership_carousel:
+        weight: 13
+        enabled: true
+      pillar_item:
+        weight: 14
+        enabled: true
+      pillars_section:
+        weight: 15
+        enabled: true
+      team_member:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

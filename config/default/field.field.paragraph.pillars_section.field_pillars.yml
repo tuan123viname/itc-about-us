@@ -1,0 +1,52 @@
+uuid: 5f2ace00-b7ab-4b8b-95ea-e56306850eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pillars
+    - paragraphs.paragraphs_type.pillar_item
+    - paragraphs.paragraphs_type.pillars_section
+  module:
+    - entity_reference_revisions
+id: paragraph.pillars_section.field_pillars
+field_name: field_pillars
+entity_type: paragraph
+bundle: pillars_section
+label: Pillars
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      pillar_item: pillar_item
+    negate: 0
+    target_bundles_drag_drop:
+      core_value_item:
+        weight: 10
+        enabled: false
+      core_values_section:
+        weight: 9
+        enabled: false
+      hero_section:
+        weight: 11
+        enabled: false
+      highlight_section:
+        weight: 12
+        enabled: false
+      leadership_carousel:
+        weight: 13
+        enabled: false
+      pillar_item:
+        weight: 15
+        enabled: true
+      pillars_section:
+        weight: 14
+        enabled: false
+      team_member:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

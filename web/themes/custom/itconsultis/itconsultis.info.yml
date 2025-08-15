@@ -1,0 +1,21 @@
+name: IT Consultis
+type: theme
+description: 'Custom theme for IT Consultis about us page'
+package: Custom
+core_version_requirement: ^10
+base theme: false
+
+libraries:
+  - itconsultis/global-styling
+  - itconsultis/carousel
+
+regions:
+  header: Header
+  navigation: Navigation
+  content: Content
+  footer: Footer
+
+dependencies:
+  - drupal:paragraphs
+  - drupal:field
+  - drupal:image

@@ -1,0 +1,44 @@
+uuid: 4db07644-dde9-4477-9f91-187a28eacee6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlight_item.field_image_position
+    - field.field.paragraph.highlight_item.field_images
+    - field.field.paragraph.highlight_item.field_title
+    - paragraphs.paragraphs_type.highlight_item
+  module:
+    - image
+    - options
+id: paragraph.highlight_item.default
+targetEntityType: paragraph
+bundle: highlight_item
+mode: default
+content:
+  field_image_position:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_images:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

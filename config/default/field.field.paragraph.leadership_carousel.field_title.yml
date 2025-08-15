@@ -1,0 +1,19 @@
+uuid: 79f41305-22f6-4323-a0c0-30d84b32f9f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.leadership_carousel
+id: paragraph.leadership_carousel.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: leadership_carousel
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

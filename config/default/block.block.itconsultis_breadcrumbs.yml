@@ -1,0 +1,22 @@
+uuid: 7df02dd8-5b13-466a-9185-32d006e8bb6d
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - itconsultis
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: itconsultis_breadcrumbs
+theme: itconsultis
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

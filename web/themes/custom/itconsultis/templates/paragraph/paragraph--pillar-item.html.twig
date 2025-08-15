@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override for Pillar Item paragraph.
+ */
+#}
+{%
+  set icon_animation = content.field_icon_animation['#items']|first.value ?: 'none'
+%}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'pillar-item',
+    'pillar--animation-' ~ icon_animation,
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }} role="listitem">
+  {% if content.field_icon %}
+    <div class="pillar-icon" aria-hidden="true">
+      {{ content.field_icon }}
+    </div>
+  {% endif %}
+  
+  {% if content.field_title %}
+    <h3 class="pillar-title">{{ content.field_title }}</h3>
+  {% endif %}
+  
+  {% if content.field_description %}
+    <div class="pillar-description">
+      {{ content.field_description }}
+    </div>
+  {% endif %}
+</article>

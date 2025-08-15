@@ -1,0 +1,20 @@
+uuid: c9a2bf8f-4e6e-4aef-9813-0e269dbf21a3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - itconsultis
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: itconsultis_page_title
+theme: itconsultis
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

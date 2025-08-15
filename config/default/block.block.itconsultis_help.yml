@@ -1,0 +1,22 @@
+uuid: fc1f5369-a0e8-4123-b3e7-e85b6f95aa8c
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - itconsultis
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: itconsultis_help
+theme: itconsultis
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

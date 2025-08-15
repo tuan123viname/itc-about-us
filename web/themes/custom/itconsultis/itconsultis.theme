@@ -1,0 +1,155 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the IT Consultis theme.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function itconsultis_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__' . $content_type;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function itconsultis_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $parent = $paragraph->getParentEntity();
+  
+  if ($parent) {
+    $suggestions[] = 'paragraph__' . $paragraph->bundle() . '__' . $parent->bundle();
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function itconsultis_preprocess_paragraph(&$variables) {
+  $paragraph = $variables['elements']['#paragraph'];
+  $variables['paragraph_type'] = $paragraph->bundle();
+  
+
+  
+  // Add specific preprocessing for carousel
+  if ($paragraph->bundle() == 'leadership_carousel') {
+    $variables['#attached']['library'][] = 'itconsultis/carousel';
+  }
+  
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function itconsultis_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  
+
+  
+  if ($node->bundle() == 'about_us_page') {
+    $variables['#attached']['library'][] = 'itconsultis/global-styling';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function itconsultis_preprocess_page(&$variables) {
+  $route_match = \Drupal::routeMatch();
+  $node = $route_match->getParameter('node');
+  
+
+  
+  if ($node && $node->bundle() == 'about_us_page') {
+    $variables['#attached']['library'][] = 'itconsultis/global-styling';
+    $variables['page_type'] = 'about-us';
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function itconsultis_preprocess_field(&$variables) {
+  $field_name = $variables['field_name'];
+  
+
+  
+  // Add specific classes for different field types
+  switch ($field_name) {
+    case 'field_page_sections':
+      $variables['attributes']['class'][] = 'page-sections';
+      break;
+    case 'field_pillars':
+      $variables['attributes']['class'][] = 'pillars-list';
+      break;
+    case 'field_values':
+      $variables['attributes']['class'][] = 'values-list';
+      break;
+    case 'field_team_members':
+      $variables['attributes']['class'][] = 'team-members-list';
+      break;
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function itconsultis_page_attachments(array &$attachments) {
+  // Add Google Fonts to all pages
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'preconnect',
+        'href' => 'https://fonts.googleapis.com',
+      ],
+    ],
+    'google-fonts-preconnect',
+  ];
+  
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'preconnect',
+        'href' => 'https://fonts.gstatic.com',
+        'crossorigin' => '',
+      ],
+    ],
+    'google-fonts-preconnect-gstatic',
+  ];
+  
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'stylesheet',
+        'href' => 'https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap',
+      ],
+    ],
+    'google-fonts-ubuntu',
+  ];
+  
+  $attachments['#attached']['html_head'][] = [
+    [
+      '#type' => 'html_tag',
+      '#tag' => 'link',
+      '#attributes' => [
+        'rel' => 'stylesheet',
+        'href' => 'https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap',
+      ],
+    ],
+    'google-fonts-lato',
+  ];
+}

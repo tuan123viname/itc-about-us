@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Theme override to display the About Us page.
+ */
+#}
+{{ attach_library('itconsultis/about-us-page') }}
+
+<div class="layout-container about-us-layout">
+  {% if page.header %}
+    <header role="banner" class="site-header">
+      {{ page.header }}
+    </header>
+  {% endif %}
+
+  {% if page.navigation %}
+    <nav role="navigation" class="main-navigation" aria-label="Main navigation">
+      {{ page.navigation }}
+    </nav>
+  {% endif %}
+
+  <main role="main" class="main-content about-us-main">
+    <a id="main-content" tabindex="-1"></a>
+    <div class="page-content-wrapper">
+      {{ page.content }}
+    </div>
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo" class="site-footer">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>

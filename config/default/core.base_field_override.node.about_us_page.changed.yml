@@ -1,0 +1,18 @@
+uuid: 2446a5da-cc3e-4252-8f10-2da9327b5f8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.about_us_page
+id: node.about_us_page.changed
+field_name: changed
+entity_type: node
+bundle: about_us_page
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

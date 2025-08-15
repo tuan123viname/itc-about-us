@@ -1,0 +1,22 @@
+uuid: f29c89ab-3906-440f-bbb7-1cb8c758f19a
+langcode: en
+status: false
+dependencies:
+  theme:
+    - itconsultis
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: itconsultis_secondary_local_tasks
+theme: itconsultis
+region: header
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

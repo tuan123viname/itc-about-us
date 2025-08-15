@@ -1,0 +1,33 @@
+uuid: 39cbe603-f3e2-4615-a776-54f1e20e9aa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.highlight_section.field_highlight_item
+    - field.field.paragraph.highlight_section.field_title
+    - paragraphs.paragraphs_type.highlight_section
+  module:
+    - entity_reference_revisions
+id: paragraph.highlight_section.default
+targetEntityType: paragraph
+bundle: highlight_section
+mode: default
+content:
+  field_highlight_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

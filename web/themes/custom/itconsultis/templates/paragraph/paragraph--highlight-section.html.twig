@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override for Highlight Section paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'highlight-section',
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }} aria-labelledby="highlight-title">
+  <div class="container">
+
+    
+    <div class="highlight-items" role="list">
+      {{ content.field_highlight_item }}
+    </div>
+  </div>
+</section>

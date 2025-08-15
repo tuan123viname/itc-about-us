@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override for Team Member paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'team-member',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }} role="listitem">
+  <div class="member-content">
+    {% if content.field_photo %}
+      <div class="member-photo">
+        {{ content.field_photo }}
+      </div>
+    {% endif %}
+    
+    <div class="member-info">
+      {% if content.field_name %}
+        <h3 class="member-name">{{ content.field_name }}</h3>
+      {% endif %}
+      
+      {% if content.field_job_title %}
+        <div class="member-title">{{ content.field_job_title }}</div>
+      {% endif %}
+      
+      {% if content.field_description %}
+        <div class="member-description">
+          {{ content.field_description }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</article>

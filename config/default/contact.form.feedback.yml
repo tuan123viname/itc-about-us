@@ -1,0 +1,14 @@
+uuid: 36ead130-21f6-4c7d-9d86-744e58e5c920
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - itc@gmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

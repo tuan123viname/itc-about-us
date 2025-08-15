@@ -1,0 +1,10 @@
+uuid: 271fa44a-b25e-49c4-b888-3968fdf57553
+langcode: en
+status: true
+dependencies: {  }
+id: leadership_carousel
+label: 'Leadership Carousel'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: f8cc73f3-6480-4cd7-9a88-6a6e4c58b673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.pillars_section
+id: paragraph.pillars_section.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: pillars_section
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,44 @@
+uuid: 60479771-8da3-4c41-933c-89b3bbba8b4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.core_value_item.field_description
+    - field.field.paragraph.core_value_item.field_icon
+    - field.field.paragraph.core_value_item.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.core_value_item
+  module:
+    - image
+id: paragraph.core_value_item.default
+targetEntityType: paragraph
+bundle: core_value_item
+mode: default
+content:
+  field_description:
+    type: string_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_icon:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

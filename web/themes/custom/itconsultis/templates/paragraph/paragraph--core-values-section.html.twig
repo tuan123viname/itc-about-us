@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Theme override for Core Values Section paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'core-values-section',
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }} aria-labelledby="values-title">
+  <div class="container">
+    <div class="section-header">
+      {% if content.field_title %}
+        <h2 id="values-title" class="section-title">{{ content.field_title }}</h2>
+      {% endif %}
+      {% if content.field_description %}
+        <div class="section-description">{{ content.field_description }}</div>
+      {% endif %}
+    </div>
+    
+    <div class="values-grid" role="list">
+      {{ content.field_values }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+uuid: 9a728105-fef3-4375-97ac-d384b2d730ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_team_members
+    - paragraphs.paragraphs_type.leadership_carousel
+    - paragraphs.paragraphs_type.team_member
+  module:
+    - entity_reference_revisions
+id: paragraph.leadership_carousel.field_team_members
+field_name: field_team_members
+entity_type: paragraph
+bundle: leadership_carousel
+label: 'Team Members'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      team_member: team_member
+    negate: 0
+    target_bundles_drag_drop:
+      core_value_item:
+        weight: 10
+        enabled: false
+      core_values_section:
+        weight: 9
+        enabled: false
+      hero_section:
+        weight: 11
+        enabled: false
+      highlight_section:
+        weight: 12
+        enabled: false
+      leadership_carousel:
+        weight: 13
+        enabled: false
+      pillar_item:
+        weight: 15
+        enabled: false
+      pillars_section:
+        weight: 14
+        enabled: false
+      team_member:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

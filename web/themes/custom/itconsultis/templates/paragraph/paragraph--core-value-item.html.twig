@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override for Core Value Item paragraph.
+ */
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'value-item',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }} role="listitem">
+  {% if content.field_icon %}
+    <div class="value-icon" aria-hidden="true">
+      {{ content.field_icon }}
+    </div>
+  {% endif %}
+  
+  <div class="value-content">
+    {% if content.field_title %}
+      <h3 class="value-title">{{ content.field_title }}</h3>
+    {% endif %}
+    
+    {% if content.field_description %}
+      <div class="value-description">
+        {{ content.field_description }}
+      </div>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,50 @@
+global-styling:
+  css:
+    theme:
+      css/base.css: {}
+      css/layout.css: {}
+      css/components.css: {}
+      css/pages/about-us.css: {}
+  js:
+    js/theme.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+  header: true
+  preprocess: false
+
+slick:
+  css:
+    theme:
+      css/slick.css: {}
+  js:
+    js/slick.min.js: {}
+  dependencies:
+    - core/jquery
+  header: true
+  preprocess: false
+
+carousel:
+  css:
+    theme:
+      css/components/carousel.css: {}
+  js:
+    js/carousel.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - itconsultis/global-styling
+    - itconsultis/slick
+
+about-us-page:
+  css:
+    theme:
+      css/pages/about-us.css: {}
+  js:
+    js/about-us.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - itconsultis/global-styling
+    - itconsultis/carousel

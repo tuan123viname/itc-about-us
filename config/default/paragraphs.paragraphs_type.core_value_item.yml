@@ -1,0 +1,10 @@
+uuid: 540a8f2d-3920-493e-b565-44d12344ec8c
+langcode: en
+status: true
+dependencies: {  }
+id: core_value_item
+label: 'Core Value Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

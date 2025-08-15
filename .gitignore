@@ -1,0 +1,61 @@
+
+# Composer vendor directory
+/vendor/
+
+# Drupal core (managed by Composer)
+/web/core/
+
+# Contributed modules, themes, and profiles (managed by Composer)
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+
+# Ignore development modules/themes/profiles if not needed in prod
+/web/modules/dev/
+/web/themes/dev/
+/web/profiles/dev/
+
+# User-uploaded files
+/web/sites/*/files/
+/web/sites/*/private/
+
+# Exclude specific folders from being ignored
+!/web/sites/*/files/2025-08/
+!/web/sites/*/files/styles/
+!/web/sites/*/files/2025-08/**
+!/web/sites/*/files/styles/**
+
+# SimpleTest temporary files
+/web/sites/simpletest/
+
+# Configuration sync directory (if outside docroot)
+# Uncomment if your config sync is here
+#/config/
+
+# Local settings and services files
+/web/sites/*/settings*.php
+/web/sites/*/services*.yml
+
+# Ignore .htaccess in files directory
+/web/sites/*/files/.htaccess
+
+# Logs and temporary files
+/tmp/
+*.log
+
+# Ignore PHP built-in server cache
+.phpunit.result.cache
+
+# IDE / Editor specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore node_modules if using frontend build tools
+/node_modules/
+.ddev/

@@ -1,0 +1,10 @@
+{#
+/**
+ * @file
+ * Theme override for the values field in core values section.
+ * This completely removes all Drupal field wrapper divs.
+ */
+#}
+{%- for item in items -%}
+  {{- item.content -}}
+{%- endfor -%}

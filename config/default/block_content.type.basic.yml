@@ -1,0 +1,10 @@
+uuid: 3e2758e0-27f7-47ce-96cb-5d06b5d8cbbd
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pQP5iQy4SdhAMVcjDUncCfkJmTofnHVtXrsMzx4k6Yk
+id: basic
+label: 'Basic block'
+revision: false
+description: 'A basic block contains a title and a body.'

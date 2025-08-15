@@ -1,0 +1,39 @@
+uuid: 05347cc1-d8ef-4428-af22-7fd3bfa9dbf0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_section.field_background_color
+    - field.field.paragraph.hero_section.field_description
+    - field.field.paragraph.hero_section.field_title
+    - paragraphs.paragraphs_type.hero_section
+  module:
+    - options
+id: paragraph.hero_section.default
+targetEntityType: paragraph
+bundle: hero_section
+mode: default
+content:
+  field_background_color:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_description:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

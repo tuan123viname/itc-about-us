@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Theme override for Hero Section paragraph.
+ */
+#}
+{%
+  set background_color = content.field_background_color['#items']|first.value ?: 'white'
+%}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    'hero-section',
+    'hero--' ~ background_color,
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }} role="banner" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-content">
+      {% if content.field_title %}
+        <h1 id="hero-title" class="hero-title">{{ content.field_title }}</h1>
+      {% endif %}
+      
+      {% if content.field_description %}
+        <div class="hero-description" role="doc-subtitle">
+          {{ content.field_description }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
